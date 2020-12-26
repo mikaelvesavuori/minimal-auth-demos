@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Auth0 auth demo</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+
+      label {
+        margin-bottom: 10px;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Auth0 auth demo</h2>
+
+    <p>Welcome to our page!</p>
+    <button id="btn-login" disabled="true" onclick="login()">Log in</button>
+    <button id="btn-logout" disabled="true" onclick="logout()">Log out</button>
+
+    <div class="hidden" id="gated-content">
+      <p>
+        You're seeing this content because you're currently <strong>logged in</strong>.
+      </p>
+      <label>
+        Access token: <pre id="ipt-access-token"></pre>
+      </label>
+      <label>
+        User profile: <pre id="ipt-user-profile"></pre>
+      </label>
+    </div>
+
+    <!-- Auth0 script -->
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.9/auth0-spa-js.production.js"></script>
+    <!-- Auth logic -->
+    <script src="/app.js"></script>
+  </body>
+</html>

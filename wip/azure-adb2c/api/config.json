@@ -1,0 +1,23 @@
+{
+  "credentials": {
+    "tenantName": "YOUR_TENANT",
+    "clientID": "YOUR_CLIENT_ID"
+  },
+  "policies": {
+    "policyName": "B2C_1_SUSI"
+  },
+  "resource": {
+    "scope": ["demo.read"]
+  },
+  "metadata": {
+    "authority": "login.microsoftonline.com",
+    "discovery": ".well-known/openid-configuration",
+    "version": "v2.0"
+  },
+  "settings": {
+    "isB2C": true,
+    "validateIssuer": false,
+    "passReqToCallback": false,
+    "loggingLevel": "info"
+  }
+}

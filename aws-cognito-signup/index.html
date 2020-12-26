@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+  <head>
+    <title>Minimal Cognito sign-up example</title>
+  </head>
+  <body>
+    <form style="width: 200px;margin: 0 auto;" id="sign-up-form">
+      <h2>Sign Up</h2>
+      <p>Name</p>
+      <input type="text" name="name">
+
+      <p>Nickname</p>
+      <input type="text" name="nickname">
+
+      <p>Phone number</p>
+      <input type="tel" name="phone">
+
+      <p>Email</p>
+      <input type="text" name="email">
+
+      <p>Password</p>
+      <input type="password" name="password">
+
+      <br>
+      <button>Sign up</button>
+    </form>
+
+    <!-- SCRIPTS -->
+    <script src="/amazon-cognito-identity.min.js"></script>
+    <!-- Auth logic -->
+    <script src="/app.js"></script>
+  </body>
+</html>

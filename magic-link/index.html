@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Magic.link auth demo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <div id="app">
+      Loading...
+    </div>
+
+    <!-- Magic.link script -->
+    <script src="https://cdn.jsdelivr.net/npm/magic-sdk/dist/magic.js"></script>
+    <script>
+      const API_KEY = ""; // EDIT THIS! Add your test key
+      const magic = new Magic(API_KEY);
+
+      const render = async () => {
+        const isLoggedIn = await magic.user.isLoggedIn();
+
+        let html = `
+          <h1>Please sign up or login</h1>
+          <form onsubmit="handleLogin(event)">
+            <input type="email" name="email" required="required" placeholder="Enter your email" />
+            <button type="submit">Send</button>
+          </form>
+        `;
+
+        if (isLoggedIn) {
+          const userMetadata = await magic.user.getMetadata();
+          html = `
+            <h1>Current user: ${userMetadata.email}</h1>
+            <button onclick="handleLogout()">Logout</button>
+          `;
+        }
+
+        document.getElementById("app").innerHTML = html;
+      };
+
+      const handleLogin = async (e) => {
+        e.preventDefault();
+        const email = new FormData(e.target).get("email");
+        if (email) {
+          await magic.auth.loginWithMagicLink({ email });
+          render();
+        }
+      };
+
+      const handleLogout = async () => {
+        await magic.user.logout();
+        render();
+      };
+
+      render();
+    </script>
+  </body>
+</html>

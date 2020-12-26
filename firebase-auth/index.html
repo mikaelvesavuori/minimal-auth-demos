@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+  <head>
+    <title>Minimal Firebase login example</title>
+    <style>
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="userdata"></div>
+    <input type="email" placeholder="email" name="email">
+    <input type="password" placeholder="password" name="password">
+    <button id="signup">Sign up</button>
+    <button id="signin" class="hide">Sign in</button>
+    <button id="signout" class="hide">Sign out</button>
+
+    <!-- SCRIPTS -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <!-- Auth logic -->
+    <script defer src="app.js"></script>
+  </body>
+</html>

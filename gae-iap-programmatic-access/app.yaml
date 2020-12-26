@@ -1,0 +1,7 @@
+runtime: nodejs14
+instance_class: F1
+
+handlers:
+- url: /
+  static_files: src/index.html
+  upload: src/index.html

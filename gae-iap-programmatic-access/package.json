@@ -1,0 +1,17 @@
+{
+  "name": "gae-iap-programmatic-access",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gcloud app deploy",
+    "browse": "gcloud app browse",
+    "visit": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "google-auth-library": "^6.1.3"
+  }
+}

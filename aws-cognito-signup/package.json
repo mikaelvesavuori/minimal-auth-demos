@@ -1,0 +1,15 @@
+{
+  "name": "aws-cognito-signup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "setup": "npm install && cp node_modules/amazon-cognito-identity-js/dist/amazon-cognito-identity.min.js . && rm -rf node_modules"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amazon-cognito-identity-js": "^4.5.6"
+  }
+}
